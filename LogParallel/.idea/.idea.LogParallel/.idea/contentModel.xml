@@ -6,7 +6,7 @@
     <e p="C:\Users\shine\Desktop\Dev\Parallel.WaitAll\LogParallel" t="IncludeFlat">
       <e p="LogParallel" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
-        <e p="Log" t="Include">
+        <e p="LogBuffer" t="Include">
           <e p="ILogBuffer.cs" t="Include" />
           <e p="LogBuffer.cs" t="Include" />
         </e>

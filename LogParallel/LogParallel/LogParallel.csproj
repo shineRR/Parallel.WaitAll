@@ -38,8 +38,8 @@
         <Reference Include="System.Xml" />
     </ItemGroup>
     <ItemGroup>
-        <Compile Include="Log\ILogBuffer.cs" />
-        <Compile Include="Log\LogBuffer.cs" />
+        <Compile Include="LogBuffer\ILogBuffer.cs" />
+        <Compile Include="LogBuffer\LogBuffer.cs" />
         <Compile Include="Program.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
     </ItemGroup>

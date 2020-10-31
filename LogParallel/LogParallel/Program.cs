@@ -1,15 +1,18 @@
-﻿using LogParallel.Log;
-
-namespace LogParallel
+﻿namespace LogParallel
 {
     internal class Program
     {
         public static void Main(string[] args)
         {
-            LogBuffer logBuffer = new LogBuffer(32);
-            for (int i = 0; i < 10; ++i)
+            LogBuffer.LogBuffer logBuffer = new LogBuffer.LogBuffer(10, 56);
+            
+            for (int i = 0; i < 123123; ++i)
+            { 
+                logBuffer.Add(i.ToString());
+            }
+            
+            while (true)
             {
-                logBuffer.Add("LOGGGING");
             }
         }
     }
