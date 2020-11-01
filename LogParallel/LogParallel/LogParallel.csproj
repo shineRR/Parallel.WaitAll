@@ -42,7 +42,6 @@
         <Compile Include="FilleService\IFileCopyService.cs" />
         <Compile Include="LogBuffer\ILogBuffer.cs" />
         <Compile Include="LogBuffer\LogBuffer.cs" />
-        <Compile Include="Parallel\IParallel.cs" />
         <Compile Include="Parallel\Parallel.cs" />
         <Compile Include="Pool\ITaskQueue.cs" />
         <Compile Include="Pool\TaskQueue.cs" />

@@ -10,7 +10,7 @@ namespace LogParallel
     {
         private static List<string> _messages = new List<string>();
         private readonly int _maxMessages;
-        private object obj = new object();
+        private readonly object _obj = new object();
         private static readonly string _path = "C:\\Users\\shine\\Desktop\\Dev\\Parallel.WaitAll\\LogParallel\\LogParallel\\log\\log.txt";
         private Timer _timer = null;
 
@@ -28,16 +28,25 @@ namespace LogParallel
         
         private void CreateFileForLogs()
         {
-            if (!File.Exists(_path))
+            FileStream fs = null;
+            try
             {
-                File.Create(_path);
+                fs = new FileStream(_path, FileMode.Create);
+            }
+            catch
+            {
+                // ignored
+            }
+            finally
+            {
+                fs?.Close();
             }
         }
 
-        private void ConfigureTimer(int timerInterval, bool state)
+        private void ConfigureTimer(int timerInterval, bool allMessages)
         {
             _timer = new Timer(timerInterval);
-            _timer.Elapsed += async(sender, e) => await ClearBuffer(true);
+            _timer.Elapsed += async(sender, e) => await ClearBuffer(allMessages);
             _timer.Enabled = true;
         }
 
@@ -71,7 +80,7 @@ namespace LogParallel
 
         public void Add(string item)
         {
-            lock (this)
+            lock (_obj)
             {
                 _messages.Add("[LOG " + DateTime.Now + "] " + item);
                 IsMaxSize();
