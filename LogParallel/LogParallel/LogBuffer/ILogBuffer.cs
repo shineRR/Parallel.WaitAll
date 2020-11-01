@@ -1,4 +1,4 @@
-﻿namespace LogParallel.LogBuffer
+﻿namespace LogParallel
 {
     public interface ILogBuffer
     {

@@ -28,6 +28,8 @@
     <list default="true" id="aebc6bd9-c7b0-426e-82b5-637ab5ab34e3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LogParallel/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LogParallel/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LogParallel/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LogParallel/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LogParallel/LogBuffer/ILogBuffer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LogParallel/LogBuffer/ILogBuffer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LogParallel/LogBuffer/LogBuffer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LogParallel/LogBuffer/LogBuffer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LogParallel/LogParallel.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/LogParallel/LogParallel.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LogParallel/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LogParallel/Program.cs" afterDir="false" />
     </list>
@@ -41,7 +43,10 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/63DD8BF9-8CFA-4BA9-85AF-735EF1A56BA9/7a/cf9d9a78/Encoding.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/LogParallel/Pool/ITaskQueue.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/63DD8BF9-8CFA-4BA9-85AF-735EF1A56BA9/33/a35fa940/Int32.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/LogParallel/Pool/TaskQueue.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/63DD8BF9-8CFA-4BA9-85AF-735EF1A56BA9/c5/ef7b8e4d/Task.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -49,8 +54,14 @@
         <option value="$PROJECT_DIR$/LogParallel/Log/ILogBuffer.cs" />
         <option value="$PROJECT_DIR$/LogParallel/Log/LogBuffer.cs" />
         <option value="$PROJECT_DIR$/LogParallel/SDas.cs" />
+        <option value="$PROJECT_DIR$/LogParallel/Parallel/IParallel.cs" />
         <option value="$PROJECT_DIR$/LogParallel/LogBuffer/ILogBuffer.cs" />
+        <option value="$PROJECT_DIR$/LogParallel/FilleService/IFileCopyService.cs" />
+        <option value="$PROJECT_DIR$/LogParallel/Pool/TaskQueue.cs" />
+        <option value="$PROJECT_DIR$/LogParallel/Pool/ITaskQueue.cs" />
         <option value="$PROJECT_DIR$/LogParallel/LogBuffer/LogBuffer.cs" />
+        <option value="$PROJECT_DIR$/LogParallel/Parallel/Parallel.cs" />
+        <option value="$PROJECT_DIR$/LogParallel/FilleService/FileCopyService.cs" />
         <option value="$PROJECT_DIR$/LogParallel/Program.cs" />
       </list>
     </option>
@@ -69,9 +80,9 @@
   </component>
   <component name="RunManager">
     <configuration name="LogParallel" type="DotNetProject" factoryName=".NET Project">
-      <option name="EXE_PATH" value="" />
-      <option name="PROGRAM_PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
+      <option name="EXE_PATH" value="$PROJECT_DIR$/LogParallel/bin/Debug/LogParallel.exe" />
+      <option name="PROGRAM_PARAMETERS" value="C:\Users\shine\Desktop\src\ C:\Users\shine\Desktop\dest\ 10" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/LogParallel/bin/Debug" />
       <option name="PASS_PARENT_ENVS" value="1" />
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
       <option name="USE_MONO" value="0" />
@@ -81,7 +92,7 @@
       <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
       <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
       <option name="PROJECT_KIND" value="Console" />
-      <option name="PROJECT_TFM" value="" />
+      <option name="PROJECT_TFM" value=".NETFramework,Version=v4.7.2" />
       <method v="2">
         <option name="Build" />
       </method>
@@ -98,6 +109,8 @@
       <workItem from="1603223765224" duration="2020000" />
       <workItem from="1603225871308" duration="142000" />
       <workItem from="1604154631814" duration="3620000" />
+      <workItem from="1604220526086" duration="1723000" />
+      <workItem from="1604222451715" duration="10801000" />
     </task>
     <servers />
   </component>
@@ -122,22 +135,30 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1877" height="2" key="GridCell.Tab.0.bottom" timestamp="1604160814011">
+    <state x="414" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604229963467">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="2" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1604160814011" />
-    <state width="1877" height="2" key="GridCell.Tab.0.center" timestamp="1604160814011">
+    <state x="414" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1604229963467" />
+    <state width="1877" height="271" key="GridCell.Tab.0.bottom" timestamp="1604234121161">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="2" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1604160814011" />
-    <state width="1877" height="2" key="GridCell.Tab.0.left" timestamp="1604160814011">
+    <state width="1877" height="271" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1604234121161" />
+    <state width="1877" height="271" key="GridCell.Tab.0.center" timestamp="1604234121161">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="2" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1604160814011" />
-    <state width="1877" height="2" key="GridCell.Tab.0.right" timestamp="1604160814011">
+    <state width="1877" height="271" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1604234121161" />
+    <state width="1877" height="271" key="GridCell.Tab.0.left" timestamp="1604234121160">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="2" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1604160814011" />
+    <state width="1877" height="271" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1604234121160" />
+    <state width="1877" height="271" key="GridCell.Tab.0.right" timestamp="1604234121161">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="271" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1604234121161" />
+    <state x="733" y="220" key="RiderGenerateDialog" timestamp="1604221594338">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="733" y="220" key="RiderGenerateDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1604221594338" />
     <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1603225890903">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

@@ -4,7 +4,7 @@ using System.IO;
 using System.Threading.Tasks;
 using System.Timers;
 
-namespace LogParallel.LogBuffer
+namespace LogParallel
 {
     public class LogBuffer: ILogBuffer
     {
@@ -17,7 +17,7 @@ namespace LogParallel.LogBuffer
         public LogBuffer(int timerInterval, int maxMessages)
         {
             _maxMessages = maxMessages;
-            CreateFolderForLogs();
+            CreateFileForLogs();
             ConfigureTimer(timerInterval, true);
         }
 
@@ -26,7 +26,7 @@ namespace LogParallel.LogBuffer
             ClearBuffer(true);
         }
         
-        private void CreateFolderForLogs()
+        private void CreateFileForLogs()
         {
             if (!File.Exists(_path))
             {
@@ -47,6 +47,7 @@ namespace LogParallel.LogBuffer
             {
                 var tempMessages = new List<string>();
                 int count = auto ? _messages.Count : _maxMessages;
+
                 tempMessages.AddRange(_messages.GetRange(0, count));
                 _messages.RemoveRange(0, count);
                 using (var sw = File.AppendText(_path))
@@ -70,8 +71,11 @@ namespace LogParallel.LogBuffer
 
         public void Add(string item)
         {
-            _messages.Add("[LOG " + DateTime.Now + "] " + item);
-            IsMaxSize();
+            lock (this)
+            {
+                _messages.Add("[LOG " + DateTime.Now + "] " + item);
+                IsMaxSize();
+            }
         }
     }
 }
