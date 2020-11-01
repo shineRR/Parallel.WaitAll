@@ -19,25 +19,25 @@ namespace LogParallel
 
         public static void WaitAll(TaskDelegate[] taskDelegates)
         {
-            AutoResetEvent mre = new AutoResetEvent(false);
+            AutoResetEvent autoResetEvent = new AutoResetEvent(false);
             int taskCounter = taskDelegates.Length;
             foreach (var func in taskDelegates)
             {
                 _taskQueue.EnqueueTask(delegate
                 {
                     func();
-                    DecrementCoounter(ref taskCounter, mre);
+                    DecrementCounter(ref taskCounter, autoResetEvent);
                 });
             }
-            mre.WaitOne();
+            autoResetEvent.WaitOne();
         }
 
-        private static void DecrementCoounter(ref int counter, AutoResetEvent mre)
+        private static void DecrementCounter(ref int counter, AutoResetEvent autoResetEvent)
         {
             if (Interlocked.Decrement(ref counter) == 0)
             {
                 _taskQueue.Dispose();
-                mre.Set();
+                autoResetEvent.Set();
             }
         }
     }
