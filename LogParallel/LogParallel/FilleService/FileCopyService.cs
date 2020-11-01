@@ -98,7 +98,6 @@ namespace LogParallel
                 
             }
             Parallel.WaitAll(taskDelegates.ToArray());
-     
             PrintCopiedFiles();
         }
     }
