@@ -6,17 +6,9 @@ using LogParallel;
 
 namespace LogParallel
 {
-    public class Parallel
+    public static class Parallel
     {
-        private LogBuffer _logBuffer;
-        public static TaskQueue _taskQueue;
-
-        public Parallel(LogBuffer logBuffer, TaskQueue taskQueue)
-        {
-            _logBuffer = logBuffer;
-            _taskQueue = taskQueue;
-        }
-
+        private static TaskQueue _taskQueue = new TaskQueue(16);
         public static void WaitAll(TaskDelegate[] taskDelegates)
         {
             AutoResetEvent autoResetEvent = new AutoResetEvent(false);

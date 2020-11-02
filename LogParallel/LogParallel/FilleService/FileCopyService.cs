@@ -10,12 +10,10 @@ namespace LogParallel
     {
         private static int _copiedFiles = 0;
         private LogBuffer _logBuffer;
-        private int _threads;
 
-        public FileCopyService(LogBuffer logBuffer, int threads)
+        public FileCopyService(LogBuffer logBuffer)
         {
             _logBuffer = logBuffer;
-            _threads = threads;
         }
 
         private static List<string> GetDirs(string path)
@@ -69,7 +67,6 @@ namespace LogParallel
 
         public void StartCopying(string src, string dest)
         {
-            Parallel parallel = new Parallel(_logBuffer, new TaskQueue(_threads));
             List<TaskDelegate> taskDelegates = new List<TaskDelegate>();
             List<String> dirFileList = GetFiles(src);
             FileAttributes attr = File.GetAttributes(dest);
@@ -77,7 +74,6 @@ namespace LogParallel
             if (!attr.HasFlag(FileAttributes.Directory)) return;
             Directory.CreateDirectory(dest);
             CreateMissingDirs(src, dest);
-            
             
             foreach (var file in dirFileList)    
             {
