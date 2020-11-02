@@ -22,8 +22,7 @@ namespace LogParallel
             
             if ((!Directory.Exists(src) || !Directory.Exists(Directory.GetDirectoryRoot(dest)) || 
                  src == dest) || threads < 1) return;
-            
-            LogBuffer logBuffer = new LogBuffer(300, 30);
+            LogBuffer logBuffer = new LogBuffer(300, 64);
             FileCopyService fileCopyService = new FileCopyService(logBuffer, threads);
             fileCopyService.StartCopying(src, dest);
         }

@@ -79,7 +79,7 @@ namespace LogParallel
             CreateMissingDirs(src, dest);
             
             
-            foreach (var file in dirFileList)
+            foreach (var file in dirFileList)    
             {
                 string fileName = file.Replace(src, dest);
 

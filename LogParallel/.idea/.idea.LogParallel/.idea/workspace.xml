@@ -27,7 +27,9 @@
   <component name="ChangeListManager">
     <list default="true" id="aebc6bd9-c7b0-426e-82b5-637ab5ab34e3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LogParallel/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LogParallel/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LogParallel/Parallel/Parallel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LogParallel/Parallel/Parallel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LogParallel/FilleService/FileCopyService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LogParallel/FilleService/FileCopyService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LogParallel/LogBuffer/LogBuffer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LogParallel/LogBuffer/LogBuffer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LogParallel/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LogParallel/Program.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,9 +40,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/LogParallel/Pool/TaskQueue.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/LogParallel/Pool/ITaskQueue.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/LogParallel/Program.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/LogParallel/Pool/TaskQueue.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -53,10 +55,10 @@
         <option value="$PROJECT_DIR$/LogParallel/FilleService/IFileCopyService.cs" />
         <option value="$PROJECT_DIR$/LogParallel/Pool/TaskQueue.cs" />
         <option value="$PROJECT_DIR$/LogParallel/Pool/ITaskQueue.cs" />
+        <option value="$PROJECT_DIR$/LogParallel/Parallel/Parallel.cs" />
         <option value="$PROJECT_DIR$/LogParallel/FilleService/FileCopyService.cs" />
         <option value="$PROJECT_DIR$/LogParallel/LogBuffer/LogBuffer.cs" />
         <option value="$PROJECT_DIR$/LogParallel/Program.cs" />
-        <option value="$PROJECT_DIR$/LogParallel/Parallel/Parallel.cs" />
       </list>
     </option>
   </component>
@@ -112,6 +114,7 @@
       <workItem from="1604258704975" duration="149000" />
       <workItem from="1604258883604" duration="173000" />
       <workItem from="1604259082033" duration="3141000" />
+      <workItem from="1604309454743" duration="930000" />
     </task>
     <servers />
   </component>
@@ -141,26 +144,26 @@
     </state>
     <state x="194" y="112" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.800@0.0.1280.800" timestamp="1604259114066" />
     <state x="414" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1604237283031" />
-    <state width="1238" height="2" key="GridCell.Tab.0.bottom" timestamp="1604262304056">
-      <screen x="0" y="0" width="1280" height="800" />
+    <state width="1877" height="221" key="GridCell.Tab.0.bottom" timestamp="1604310399236">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1238" height="2" key="GridCell.Tab.0.bottom/0.0.1280.800@0.0.1280.800" timestamp="1604262304056" />
-    <state width="1877" height="375" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1604237317730" />
-    <state width="1238" height="2" key="GridCell.Tab.0.center" timestamp="1604262304056">
-      <screen x="0" y="0" width="1280" height="800" />
+    <state width="1877" height="221" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1604310399236" />
+    <state width="1877" height="221" key="GridCell.Tab.0.center" timestamp="1604310399236">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1238" height="2" key="GridCell.Tab.0.center/0.0.1280.800@0.0.1280.800" timestamp="1604262304056" />
-    <state width="1877" height="375" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1604237317730" />
-    <state width="1238" height="2" key="GridCell.Tab.0.left" timestamp="1604262304056">
-      <screen x="0" y="0" width="1280" height="800" />
+    <state width="1877" height="221" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1604310399236" />
+    <state width="1877" height="221" key="GridCell.Tab.0.left" timestamp="1604310399236">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1238" height="2" key="GridCell.Tab.0.left/0.0.1280.800@0.0.1280.800" timestamp="1604262304056" />
-    <state width="1877" height="375" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1604237317730" />
-    <state width="1238" height="2" key="GridCell.Tab.0.right" timestamp="1604262304056">
-      <screen x="0" y="0" width="1280" height="800" />
+    <state width="1877" height="221" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1604310399236" />
+    <state width="1877" height="221" key="GridCell.Tab.0.right" timestamp="1604310399236">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1238" height="2" key="GridCell.Tab.0.right/0.0.1280.800@0.0.1280.800" timestamp="1604262304056" />
-    <state width="1877" height="375" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1604237317730" />
+    <state width="1877" height="221" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1604310399236" />
     <state width="1877" height="375" key="GridCell.Tab.1.bottom" timestamp="1604237317730">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

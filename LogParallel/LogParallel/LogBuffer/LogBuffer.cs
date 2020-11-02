@@ -52,13 +52,15 @@ namespace LogParallel
 
         private Task ClearBuffer(bool auto)
         {
-            lock (this)
+            var tempMessages = new List<string>();
+            lock (_obj)
             {
-                var tempMessages = new List<string>();
-                int count = auto ? _messages.Count : _maxMessages;
-
+                int count = auto || _messages.Count < _maxMessages ? _messages.Count : _maxMessages;
                 tempMessages.AddRange(_messages.GetRange(0, count));
                 _messages.RemoveRange(0, count);
+            }
+            lock (this)
+            {
                 using (var sw = File.AppendText(_path))
                 {
                     foreach (var message in tempMessages)
